@@ -9,7 +9,6 @@ const addBook = () => {
   const [title, author] = bookAddView.getFormValues();
   if (!title || !author) return;
   model.addBook(title, author);
-  bookAddView.clearInputs();
   bookView.render(model.state.books);
 };
 

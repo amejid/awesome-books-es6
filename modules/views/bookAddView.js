@@ -5,13 +5,16 @@ class BookAddView {
 
   #btnAddEl = document.querySelector('.btn-submit');
 
-  clearInputs() {
+  #clearInputs() {
     this.#titleEl.value = '';
     this.#authorEl.value = '';
   }
 
   getFormValues() {
-    return [this.#titleEl.value.trim(), this.#authorEl.value.trim()];
+    const info = [this.#titleEl.value.trim(), this.#authorEl.value.trim()];
+
+    this.#clearInputs();
+    return info;
   }
 
   addHandlerAdder(handler) {
