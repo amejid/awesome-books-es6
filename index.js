@@ -12,8 +12,7 @@ const addBook = () => {
   bookView.render(model.state.books);
 };
 
-const removeBook = (e) => {
-  const id = bookView.getRemovedId(e);
+const removeBook = (id) => {
   model.removeBook(id);
   bookView.render(model.state.books);
 };

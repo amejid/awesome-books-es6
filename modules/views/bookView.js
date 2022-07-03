@@ -1,8 +1,6 @@
 class BookView {
   #parentEl = document.querySelector('.books-container');
 
-  #targetId;
-
   render(books) {
     this.#parentEl.innerHTML = '';
     if (!books) return;
@@ -17,15 +15,14 @@ class BookView {
     });
   }
 
-  getRemovedId(e) {
-    if (e.target.classList.contains('remove')) {
-      this.#targetId = +e.target.dataset.bookid;
-    }
-    return this.#targetId;
-  }
-
   addHandlerRemover(handler) {
-    this.#parentEl.addEventListener('click', handler);
+    this.#parentEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('.remove');
+      if (!btn) return;
+      const bookId = +btn.dataset.bookid;
+
+      handler(bookId);
+    });
   }
 }
 
