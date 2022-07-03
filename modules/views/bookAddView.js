@@ -15,7 +15,10 @@ class BookAddView {
   }
 
   addHandlerAdder(handler) {
-    this.#btnAddEl.addEventListener('click', handler);
+    this.#btnAddEl.addEventListener('click', (e) => {
+      e.preventDefault();
+      handler();
+    });
   }
 }
 
