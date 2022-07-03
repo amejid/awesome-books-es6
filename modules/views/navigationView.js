@@ -7,8 +7,8 @@ class NavigationView {
 
   #yearEl = document.querySelector('.year');
 
-  setYear(time) {
-    this.#yearEl.textContent = time;
+  setYear(now) {
+    this.#yearEl.textContent = `${now.day}-${now.month}-${now.year}, ${now.hour}:${now.minute}`;
   }
 
   navigate() {
