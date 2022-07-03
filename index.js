@@ -5,8 +5,7 @@ import * as model from './modules/model.js';
 import navigationView from './modules/views/navigationView.js';
 import { DateTime } from './modules/luxon.js';
 
-const addBook = (e) => {
-  e.preventDefault();
+const addBook = () => {
   const [title, author] = bookAddView.getFormValues();
   if (!title || !author) return;
   model.addBook(title, author);

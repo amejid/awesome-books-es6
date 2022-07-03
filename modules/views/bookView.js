@@ -25,7 +25,10 @@ class BookView {
   }
 
   addHandlerRemover(handler) {
-    this.#parentEl.addEventListener('click', handler);
+    this.#parentEl.addEventListener('click', (e) => {
+      e.preventDefault();
+      handler();
+    });
   }
 }
 
