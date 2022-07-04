@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Books</title>
+
+    <link rel="stylesheet" href="index.css" />
+    <script type="module" defer src="index.js"></script>
+  </head>
+  <body>
+    <header class="container header">
+      <p class="page-title">Awesome Books</p>
+      <nav>
+        <ul class="nav-links">
+          <li class="nav-link nav-link--active" data-sect="1">List</li>
+          <li class="dash">|</li>
+          <li class="nav-link" data-sect="2">Add new</li>
+          <li class="dash">|</li>
+          <li class="nav-link" data-sect="3">Contact</li>
+        </ul>
+      </nav>
+    </header>
+    <div class="year-con container"><p class="year"></p></div>
+    <section class="container section section-1 section--active">
+      <h1 class="section-title">All awesome books</h1>
+      <div class="books-container"></div>
+    </section>
+    <section class="container section section-2">
+      <h2 class="form-title">Add a new book</h2>
+      <form action="" class="form">
+        <input class="form-control" name="title" type="text" placeholder="Title" id="title" />
+        <input class="form-control" name="author" type="text" placeholder="Author" id="author" />
+        <button class="btn-submit" type="submit">Add</button>
+      </form>
+    </section>
+    <section class="container section section-3">
+      <h2 class="form-title">Contact information</h2>
+      <div class="contact-container">
+        <p class="description">Do you have any questions or you just want to say "Hello"?</p>
+        <p class="description"></p>
+        <p class="description">You can reach out to us</p>
+        <ul class="contact-list">
+          <li class="contact">
+            Our email: <a href="mailto:kayongachiteta01@gmail.com">kayongachiteta01@gmail.com</a>
+          </li>
+          <li class="contact">Our phone number: <a href="tel:+251911558295">+251911558295</a></li>
+          <li class="contact">Our Address: Street name 22, 84503 City, Country</li>
+        </ul>
+      </div>
+    </section>
+    <footer class="footer container">
+      <p>Copyright ...</p>
+    </footer>
+  </body>
+</html>
